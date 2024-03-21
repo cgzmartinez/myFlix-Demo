@@ -6,101 +6,100 @@ import {
   Dialog,
   DialogHeader,
   DialogBody,
-  DialogFooter,
   Tooltip,
   Typography,
-} from "@material-tailwind/react";
-import { useState } from "react";
+} from '@material-tailwind/react'
+import { useState } from 'react'
 export default function Cards() {
   const data = [
     {
-      title: "Minari",
-      director: "Lee Isaac Chung",
-      genre: "Drama",
+      title: 'Minari',
+      director: 'Lee Isaac Chung',
+      genre: 'Drama',
       summary:
-        "A Korean American family moves to an Arkansas farm in search of its own American dream. Amidst the challenges of this new life in the strange and rugged Ozarks, they discover the undeniable resilience of family and what really makes a home.",
-      image: "https://i.ebayimg.com/images/g/~poAAOSwK21gUpH9/s-l1600.jpg",
+        'A Korean American family moves to an Arkansas farm in search of its own American dream. Amidst the challenges of this new life in the strange and rugged Ozarks, they discover the undeniable resilience of family and what really makes a home.',
+      image: 'https://i.ebayimg.com/images/g/~poAAOSwK21gUpH9/s-l1600.jpg',
     },
     {
-      title: "Burning",
-      director: "Lee Chang Dong",
-      genre: "Drama, Thriller",
+      title: 'Burning',
+      director: 'Lee Chang Dong',
+      genre: 'Drama, Thriller',
       summary:
         "Jong-soo runs into Hae-mi, a girl who once lived in his neighborhood, and she asks him to watch her cat while she's out of town. When she returns, she introduces him to Ben, a man she met on the trip. Ben proceeds to tell Jong-soo about his hobby.",
       image:
-        "https://64.media.tumblr.com/3e957bece1dce7591fe3cf523f108f58/tumblr_pldp3tu2I11tk4n0bo3_1280.png",
+        'https://64.media.tumblr.com/3e957bece1dce7591fe3cf523f108f58/tumblr_pldp3tu2I11tk4n0bo3_1280.png',
     },
     {
-      title: "John Wick",
-      director: "Chad Stahelski",
-      genre: "Action",
+      title: 'John Wick',
+      director: 'Chad Stahelski',
+      genre: 'Action',
       summary:
         "Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, John unleashes the remorseless killing machine within and seeks vengeance. Meanwhile, Iosef's father (Michael Nyqvist) -- John's former colleague -- puts a huge bounty on John's head.",
       image:
-        "https://filmartgallery.com/cdn/shop/products/John-Wick-Vintage-Movie-Poster-Original-1-Sheet-27x41.jpg?v=1679634117",
+        'https://filmartgallery.com/cdn/shop/products/John-Wick-Vintage-Movie-Poster-Original-1-Sheet-27x41.jpg?v=1679634117',
     },
     {
-      title: "Oldboy",
-      director: "Park Chan-wook",
-      genre: "Thriller",
+      title: 'Oldboy',
+      director: 'Park Chan-wook',
+      genre: 'Thriller',
       summary:
         "Dae-Su is an obnoxious drunk bailed from the police station yet again by a friend. However, he's abducted from the street and wakes up in a cell, where he remains for the next 15 years, drugged unconscious when human contact is unavoidable, otherwise with only the television as company. And then, suddenly released, he is invited to track down his jailor with a denouement that is simply stunning.",
-      image: "https://i.ebayimg.com/images/g/cE4AAOSwdW9Z77tX/s-l1200.webp",
+      image: 'https://i.ebayimg.com/images/g/cE4AAOSwdW9Z77tX/s-l1200.webp',
     },
     {
-      title: "Sicario",
-      director: "Denis Villeneuve",
-      genre: "Crime Thriller",
+      title: 'Sicario',
+      director: 'Denis Villeneuve',
+      genre: 'Crime Thriller',
       summary:
-        "After rising through the ranks of her male-dominated profession, idealistic FBI agent Kate Macer (Emily Blunt) receives a top assignment. Recruited by mysterious government official Matt Graver (Josh Brolin), Kate joins a task force for the escalating war against drugs. Led by the intense and shadowy Alejandro (Benicio del Toro), the team travels back-and-forth across the U.S.-Mexican border, using one cartel boss (Bernardo Saracino) to flush out a bigger one (Julio Cesar Cedillo).",
-      image: "https://m.media-amazon.com/images/I/A1GdxURr+uL.jpg",
+        'After rising through the ranks of her male-dominated profession, idealistic FBI agent Kate Macer (Emily Blunt) receives a top assignment. Recruited by mysterious government official Matt Graver (Josh Brolin), Kate joins a task force for the escalating war against drugs. Led by the intense and shadowy Alejandro (Benicio del Toro), the team travels back-and-forth across the U.S.-Mexican border, using one cartel boss (Bernardo Saracino) to flush out a bigger one (Julio Cesar Cedillo).',
+      image: 'https://m.media-amazon.com/images/I/A1GdxURr+uL.jpg',
     },
     {
-      title: "Parasite",
-      director: "Bong Joon Ho",
-      genre: "Crime Thriller",
+      title: 'Parasite',
+      director: 'Bong Joon Ho',
+      genre: 'Crime Thriller',
       summary:
-        "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
-      image: "https://i.ebayimg.com/images/g/hBIAAOSwrpRd2XoM/s-l1600.jpg",
+        'Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.',
+      image: 'https://i.ebayimg.com/images/g/hBIAAOSwrpRd2XoM/s-l1600.jpg',
     },
     {
-      title: "Snowpiercer",
-      director: "Bong Joon Ho",
-      genre: "Sci-fi",
+      title: 'Snowpiercer',
+      director: 'Bong Joon Ho',
+      genre: 'Sci-fi',
       summary:
         "Survivors of Earth's second ice age live out their days on a luxury train that ploughs through snow and ice. The train's poorest residents, who live in the squalid caboose, plan to improve their lot by taking over the engine room.",
       image:
-        "https://m.media-amazon.com/images/M/MV5BMTQ3NzA1MTY3MV5BMl5BanBnXkFtZTgwNzE2Mzg5MTE@._V1_.jpg",
+        'https://m.media-amazon.com/images/M/MV5BMTQ3NzA1MTY3MV5BMl5BanBnXkFtZTgwNzE2Mzg5MTE@._V1_.jpg',
     },
-  ];
+  ]
 
   const [favoriteStates, setFavoriteStates] = useState(
-    Array(data.length).fill(false),
-  );
-  const [openStates, setOpenStates] = useState(Array(data.length).fill(false));
+    Array(data.length).fill(false)
+  )
+  const [openStates, setOpenStates] = useState(Array(data.length).fill(false))
 
   const handleIsFavorite = (index) => {
     setFavoriteStates((prevStates) =>
-      prevStates.map((isFav, i) => (i === index ? !isFav : isFav)),
-    );
-  };
+      prevStates.map((isFav, i) => (i === index ? !isFav : isFav))
+    )
+  }
   const handleOpen = (index, shouldOpen) => {
     setOpenStates((prevOpenStates) =>
-      prevOpenStates.map((isOpen, i) => (i === index ? shouldOpen : isOpen)),
-    );
-  };
+      prevOpenStates.map((isOpen, i) => (i === index ? shouldOpen : isOpen))
+    )
+  }
 
   return (
     <div className="max-w-[1640px] gap-2 mx-auto flex pb-10 overflow-x-auto no-scrollbar">
       {data.map(({ title, director, genre, summary, image }, index) => {
         return (
           <div key={index} className="p-4">
-            <Card className="w-80 p2 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white">
+            <Card className="w-80 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white">
               <h3 className="font-semibold text-black text-md pt-5 pl-[22px]">
                 {title}
               </h3>
               <h3 className="font-light text-black text-sm pl-[22px]">
-                Directed by:{" "}
+                Directed by:{' '}
                 <span className="font-bold text-indigo-500">{director}</span>
               </h3>
               <CardBody>
@@ -144,7 +143,7 @@ export default function Cards() {
                 <IconButton
                   variant="text"
                   size="sm"
-                  color={favoriteStates[index] ? "red" : "blue-gray"} // Use favoriteStates
+                  color={favoriteStates[index] ? 'red' : 'blue-gray'} // Use favoriteStates
                   onClick={() => handleIsFavorite(index)} // Pass index                onClick={handleIsFavorite}
                 >
                   <svg
@@ -165,8 +164,8 @@ export default function Cards() {
               handler={() =>
                 setOpenStates((prevOpenStates) =>
                   prevOpenStates.map((isOpen, i) =>
-                    i === index ? !isOpen : isOpen,
-                  ),
+                    i === index ? !isOpen : isOpen
+                  )
                 )
               }
               animate={{
@@ -183,11 +182,10 @@ export default function Cards() {
                 </Button>
               </div>
               <DialogBody value={summary}>{summary}</DialogBody>
-              <DialogFooter></DialogFooter>
             </Dialog>
           </div>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import "./index.css";
-import Navbar from "./components/Navbar";
-import Cards from "./components/Cards";
-import Profile from "./components/Profile";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './App.css'
+import './index.css'
+import Navbar from './components/Navbar'
+import Cards from './components/Cards'
+import Profile from './components/Profile'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
